@@ -25,23 +25,18 @@ public class ProductManager {
     }
 
 
-//   With List:
     public Product[] searchBy(String text) {
 
-        List<Product> list = new ArrayList<Product>();
+        ProductRepository repoResult = new ProductRepository();
 
         for (Product product : repo.getProduct()) {
-           if (conformity(product,text)) {
-               list.add(product);
-           }
+
+            if (conformity(product,text)) {
+                repoResult.save(product);
+            }
         }
-        Product[] result = new Product[list.size()];
-        result = list.toArray(result);
-        return result;
+        return repoResult.getProduct();
     }
-
-
-
 
     public Product[] getAllProduct() {
         return repo.getProduct();
