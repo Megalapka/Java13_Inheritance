@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.domain.Book;
@@ -39,7 +40,7 @@ public class ProductManagerTest {
 
     @Test
     public void shouldGetAllProduct() {
-        Product[] expected = { product1, product2, product3, product4, book1, book2, book3, smartphone1, smartphone2, smartphone3 };
+        Product[] expected = {product1, product2, product3, product4, book1, book2, book3, smartphone1, smartphone2, smartphone3};
 
         Product[] actual = manager.getAllProduct();
 
@@ -49,8 +50,8 @@ public class ProductManagerTest {
     @Test
     public void shouldSearchByName() {
 
-        Product[] expected = { product1, product2, product3, product4 };
-        Product[] actual = manager.searchBy("roduct");
-        assertArrayEquals(expected,actual);
+        Product[] expected = {product1, product2, product3, product4};
+        Product[] actual = manager.searchBy("Product");
+        assertArrayEquals(expected, actual);
     }
 }
