@@ -21,8 +21,8 @@ public class ProductManagerTest {
     Book book3 = new Book(7, "Book3", 44, "Author2");
 
     Smartphone smartphone1 = new Smartphone(8, "smartphone1", 56, "manuf1");
-    Smartphone smartphone2 = new Smartphone(8, "smartphone2", 18, "manuf2");
-    Smartphone smartphone3 = new Smartphone(8, "smartphone3", 47, "manuf2");
+    Smartphone smartphone2 = new Smartphone(9, "smartphone2", 18, "manuf2");
+    Smartphone smartphone3 = new Smartphone(10, "smartphone3", 47, "manuf2");
 
     @BeforeEach
     public void setup() {
